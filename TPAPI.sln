@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPAPI", "TPAPI\TPAPI.csproj", "{CEFBC193-7D1D-4FEF-BDE0-DF0073551C8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPAPI_MSTest", "TPAPI_MSTest\TPAPI_MSTest.csproj", "{5B443860-0133-4EE2-B06A-6BD600D4199E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEFBC193-7D1D-4FEF-BDE0-DF0073551C8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEFBC193-7D1D-4FEF-BDE0-DF0073551C8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEFBC193-7D1D-4FEF-BDE0-DF0073551C8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEFBC193-7D1D-4FEF-BDE0-DF0073551C8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B443860-0133-4EE2-B06A-6BD600D4199E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B443860-0133-4EE2-B06A-6BD600D4199E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B443860-0133-4EE2-B06A-6BD600D4199E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B443860-0133-4EE2-B06A-6BD600D4199E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0CADEE8B-11FA-4B72-833B-2D08D2579AC5}
+	EndGlobalSection
+EndGlobal
