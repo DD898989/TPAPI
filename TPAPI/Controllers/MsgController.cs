@@ -191,26 +191,26 @@ namespace TPAPI.Controllers
 
 
         [HttpPost]
-        public DataResult<dynamic> TP_Email_Send(SendModel model)
+        public DataResult<dynamic> SendEmail(SendModel model)
         {
             if (model.ResendTimes == null) { return DataResult<dynamic>.Fail(Code.參數錯誤, "parameter error: ResendTimes is empty"); }
 
             logger.Info(JsonConvert.SerializeObject(model));
 
             var check = checkParameter(ref model);
-            if (check.code != Code.TP成功)
+            if (check.code != Code.成功)
             {
                 return check;
             }
 
             var send = EmailDelegate((int)model.ResendTimes)(model, out EProvider provider, out string sender);
-            if (send.code != Code.TP成功)
+            if (send.code != Code.成功)
             {
                 return send;
             }
 
             var save = Save(model, provider, EType.Mail, sender, DateTime.Now);
-            if (save.code != Code.TP成功)
+            if (save.code != Code.成功)
             {
                 return save;
             }
@@ -219,26 +219,26 @@ namespace TPAPI.Controllers
         }
 
         [HttpPost]
-        public DataResult<dynamic> TP_SMS_Send(SendModel model)
+        public DataResult<dynamic> SendSMS(SendModel model)
         {
             if (model.ResendTimes == null) { return DataResult<dynamic>.Fail(Code.參數錯誤, "parameter error: ResendTimes is empty"); }
 
             logger.Info(JsonConvert.SerializeObject(model));
 
             var check = checkParameter(ref model);
-            if (check.code != Code.TP成功)
+            if (check.code != Code.成功)
             {
                 return check;
             }
 
             var send = SMSDelegate((int)model.ResendTimes)(model, out EProvider provider, out string sender);
-            if (send.code != Code.TP成功)
+            if (send.code != Code.成功)
             {
                 return send;
             }
 
             var save = Save(model, provider, EType.SMS, sender, DateTime.Now);
-            if (save.code != Code.TP成功)
+            if (save.code != Code.成功)
             {
                 return save;
             }
@@ -246,13 +246,13 @@ namespace TPAPI.Controllers
             return DataResult<dynamic>.Success();
         }
 
-        [HttpPost]
-        public DataResult<dynamic> TP_Email_Get(GetModel model)
+        [HttpGet]
+        public DataResult<dynamic> GetEmail(GetModel model)
         {
             logger.Info(JsonConvert.SerializeObject(model));
 
             var check = checkParameter(ref model);
-            if (check.code != Code.TP成功)
+            if (check.code != Code.成功)
             {
                 return check;
             }
@@ -260,13 +260,13 @@ namespace TPAPI.Controllers
             return Load(model, EType.Mail);
         }
 
-        [HttpPost]
-        public DataResult<dynamic> TP_SMS_Get(GetModel model)
+        [HttpGet]
+        public DataResult<dynamic> GetSMS(GetModel model)
         {
             logger.Info(JsonConvert.SerializeObject(model));
 
             var check = checkParameter(ref model);
-            if (check.code != Code.TP成功)
+            if (check.code != Code.成功)
             {
                 return check;
             }

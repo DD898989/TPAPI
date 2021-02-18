@@ -48,14 +48,13 @@ namespace TPAPI.Models
     public enum Code
     {
         //通用
-        TP失敗 = -1,
-        TP待定義 = 0,
-        TP成功 = 1,
+        失敗 = -1,
+        待定義 = 0,
+        成功 = 1,
 
         //資料庫相關
         資料庫錯誤 = 5000,
         查無該筆資料 = 5001,
-
 
         //參數相關
         參數錯誤 = 6000,
@@ -74,12 +73,12 @@ namespace TPAPI.Models
 
         static public DataResult<dynamic> Success(T successData)
         {
-            return new DataResult<dynamic>(Code.TP成功, successData, null);
+            return new DataResult<dynamic>(Code.成功, successData, null);
         }
 
         static public DataResult<dynamic> Success()
         {
-            return new DataResult<dynamic>(Code.TP成功, null, null);
+            return new DataResult<dynamic>(Code.成功, null, null);
         }
 
         static public DataResult<dynamic> Fail(Code code, object errorData)

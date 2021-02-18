@@ -23,13 +23,13 @@ namespace TPAPI_MSTest
             };
 
             input.ResendTimes = 0;
-            var result1 = controller.TP_Email_Send(input);
+            var result1 = controller.SendEmail(input);
             input.ResendTimes = 1;
-            var result2 = controller.TP_Email_Send(input);
+            var result2 = controller.SendEmail(input);
             input.ResendTimes = 2;
-            var result3 = controller.TP_Email_Send(input);
+            var result3 = controller.SendEmail(input);
 
-            if(result1.code != Code.TP成功)
+            if(result1.code != Code.成功)
             {
                 Assert.Fail();
             }
@@ -39,7 +39,7 @@ namespace TPAPI_MSTest
                 Assert.Fail();
             }
 
-            if (result3.code != Code.TP成功)
+            if (result3.code != Code.成功)
             {
                 Assert.Fail();
             }

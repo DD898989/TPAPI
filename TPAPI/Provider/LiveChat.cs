@@ -417,7 +417,7 @@ namespace TPAPI.Provider
 
                     var dt = (new DateTime(1970, 1, 1, 0, 0, 0)).AddHours(8).AddSeconds((double)notify.chat.started_timestamp);
                     var db = MsgController.Save(model, EProvider.LiveChat, EType.Chat, "", dt);
-                    if (db.code != Code.TP成功)
+                    if (db.code != Code.成功)
                     {
                         logger.Error(db.errorData);
                         goto ReturnOK;
@@ -518,7 +518,7 @@ namespace TPAPI.Provider
 
                 var dt = (new DateTime(1970, 1, 1, 0, 0, 0)).AddHours(8).AddSeconds((double)msg.timestamp);
                 var db = MsgController.Save(model, EProvider.LiveChat, EType.Chat, msg.author_name, dt);
-                if (db.code != Code.TP成功)
+                if (db.code != Code.成功)
                 {
                     logger.Error(db.errorData);
                     break;
@@ -571,7 +571,7 @@ namespace TPAPI.Provider
                     "   email:" + notify.ticket.requester.mail
 
                     , dt);
-                if (db.code != Code.TP成功)
+                if (db.code != Code.成功)
                 {
                     logger.Error(db.errorData);
                 }
