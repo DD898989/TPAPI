@@ -22,7 +22,7 @@ namespace TPAPI.Provider
 {
     public partial/*沒有model*/ class LiveChatController : ApiController
     {
-        private static Logger logger = LogManager.GetCurrentClassLogger();
+        private readonly static Logger logger = LogManager.GetCurrentClassLogger();
 
         public static NotifyTokenAgent _modelTokenAgent = null;
         public static NotifyTokenCustomer _modelTokenCustomer = null;
@@ -173,7 +173,7 @@ namespace TPAPI.Provider
             }
         }
 
-        static System.Timers.Timer UpdateAgentToken_0 = new System.Timers.Timer();
+        readonly static System.Timers.Timer UpdateAgentToken_0 = new System.Timers.Timer();
         static void UpdateAgentToken_1(object source, System.Timers.ElapsedEventArgs e)
         {
             UpdateAgentToken_0.Stop();
@@ -264,7 +264,7 @@ namespace TPAPI.Provider
         }
 
 
-        static System.Timers.Timer UpdateCustomerToken_0 = new System.Timers.Timer();
+        readonly static System.Timers.Timer UpdateCustomerToken_0 = new System.Timers.Timer();
         static void UpdateCustomerToken_1(object source, System.Timers.ElapsedEventArgs e)
         {
             UpdateCustomerToken_0.Stop();

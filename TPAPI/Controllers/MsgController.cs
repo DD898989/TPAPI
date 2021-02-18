@@ -13,7 +13,7 @@ namespace TPAPI.Controllers
 {
     public class MsgController : ApiController
     {
-        private Logger logger = LogManager.GetLogger("logger" + Migrate.programVersion);
+        private readonly Logger logger = LogManager.GetLogger("logger" + Migrate.programVersion);
         public delegate DataResult<dynamic> SendDel(SendModel model, out EProvider provider, out string sender);
 
         public static DataResult<dynamic> Save(SendModel model, EProvider provider, EType type, string sender, DateTime dateTime)
@@ -140,7 +140,7 @@ namespace TPAPI.Controllers
             }
         }
 
-        private DataResult<dynamic> checkParameter(ref SendModel model)
+        private DataResult<dynamic> CheckParameter(ref SendModel model)
         {
             if (!(model?.MainAccountID?.Length > 0)) { return DataResult<dynamic>.Fail(Code.參數錯誤, "parameter error: MainAccountID is empty"); }
             if (!(model?.Content?.Length > 0)) { return DataResult<dynamic>.Fail(Code.參數錯誤, "parameter error: Content is empty"); }
@@ -152,7 +152,7 @@ namespace TPAPI.Controllers
             return DataResult<dynamic>.Success();
         }
 
-        private DataResult<dynamic> checkParameter(ref GetModel model)
+        private DataResult<dynamic> CheckParameter(ref GetModel model)
         {
             if (!(model?.BrandID > 0)) { return DataResult<dynamic>.Fail(Code.參數錯誤, "parameter error: BrandID is empty"); }
             if (!(model?.RecordCount > 0)) { model.RecordCount = 10; }
@@ -196,7 +196,7 @@ namespace TPAPI.Controllers
 
             logger.Info(JsonConvert.SerializeObject(model));
 
-            var check = checkParameter(ref model);
+            var check = CheckParameter(ref model);
             if (check.code != Code.成功)
             {
                 return check;
@@ -224,7 +224,7 @@ namespace TPAPI.Controllers
 
             logger.Info(JsonConvert.SerializeObject(model));
 
-            var check = checkParameter(ref model);
+            var check = CheckParameter(ref model);
             if (check.code != Code.成功)
             {
                 return check;
@@ -250,7 +250,7 @@ namespace TPAPI.Controllers
         {
             logger.Info(JsonConvert.SerializeObject(model));
 
-            var check = checkParameter(ref model);
+            var check = CheckParameter(ref model);
             if (check.code != Code.成功)
             {
                 return check;
@@ -264,7 +264,7 @@ namespace TPAPI.Controllers
         {
             logger.Info(JsonConvert.SerializeObject(model));
 
-            var check = checkParameter(ref model);
+            var check = CheckParameter(ref model);
             if (check.code != Code.成功)
             {
                 return check;
