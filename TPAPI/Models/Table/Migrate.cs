@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Dapper;
-using NLog;
-using System.Data.SqlClient;
-using System.Configuration;
-using RestSharp;
 using System.IO;
-using TPAPI.Provider;
-using System.Text;
-using Newtonsoft.Json.Linq;
+using System.Linq;
+using System.Data.SqlClient;
+using NLog;
+using Dapper;
 
 namespace TPAPI.Models.Table
 {

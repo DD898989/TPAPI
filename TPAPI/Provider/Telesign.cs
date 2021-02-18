@@ -1,10 +1,9 @@
 ﻿using System;
-using NLog;
+using System.Configuration;
 using TPAPI.Models;
 using TPAPI.Models.Table;
-using Newtonsoft.Json;
 using Telesign;
-using System.Configuration;
+using Newtonsoft.Json;
 
 namespace TPAPI.Provider
 {

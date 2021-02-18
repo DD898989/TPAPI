@@ -1,11 +1,10 @@
-﻿
-using SendGrid;
-using SendGrid.Helpers.Mail;
-using Newtonsoft.Json;
+﻿using System.Configuration;
 using TPAPI.Models;
 using TPAPI.Models.Table;
-using System.Configuration;
+using SendGrid;
+using SendGrid.Helpers.Mail;
 using NLog;
+using Newtonsoft.Json;
 
 namespace TPAPI.Provider
 {

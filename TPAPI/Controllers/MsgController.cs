@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Web.Http;
 using System.Linq;
 using System.Data.SqlClient;
-using TPAPI.Models;
-using TPAPI.Models.Table;
-using TPAPI.Provider;
 using NLog;
 using Dapper;
 using Newtonsoft.Json;
+using TPAPI.Models;
+using TPAPI.Models.Table;
 
 namespace TPAPI.Controllers
 {

@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using NLog;
-using sib_api_v3_sdk.Api;
-using sib_api_v3_sdk.Client;
-using sib_api_v3_sdk.Model;
 using TPAPI.Models;
 using TPAPI.Models.Table;
+using sib_api_v3_sdk.Api;
+using sib_api_v3_sdk.Model;
+using sib_api_v3_sdk.Client;
+using NLog;
 
 namespace TPAPI.Provider
 {

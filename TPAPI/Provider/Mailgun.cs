@@ -1,13 +1,10 @@
-﻿
-using NLog;
+﻿using System.Configuration;
 using TPAPI.Models;
-using TPAPI.Provider;
 using TPAPI.Models.Table;
-using RestSharp;
 using FluentEmail.Core;
-using Newtonsoft.Json;
 using FluentEmail.Mailgun;
-using System.Configuration;
+using NLog;
+using Newtonsoft.Json;
 
 namespace TPAPI.Provider
 {

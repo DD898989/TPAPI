@@ -1,11 +1,11 @@
 ﻿using System;
+using System.Configuration;
 using System.Collections.Generic;
-using Plivo;
 using TPAPI.Models;
 using TPAPI.Models.Table;
-using Newtonsoft.Json;
 using NLog;
-using System.Configuration;
+using Plivo;
+using Newtonsoft.Json;
 
 namespace TPAPI.Provider
 {   //

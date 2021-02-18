@@ -1,12 +1,12 @@
 ﻿using System;
+using System.Configuration;
 using TPAPI.Models;
 using TPAPI.Models.Table;
-using Newtonsoft.Json;
-using NLog;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
 using Twilio.Types;
-using System.Configuration;
+using NLog;
+using Newtonsoft.Json;
 
 namespace TPAPI.Provider
 {

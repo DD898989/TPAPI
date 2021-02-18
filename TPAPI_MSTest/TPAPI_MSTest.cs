@@ -1,7 +1,6 @@
-﻿
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using TPAPI.Models;
 using TPAPI.Controllers;
-using TPAPI.Models;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace TPAPI_MSTest
 {
