@@ -273,5 +273,16 @@ namespace TPAPI.Controllers
 
             return Load(model, EType.SMS);
         }
+
+
+        [HttpGet]
+        public DataResult<dynamic> GetCode()
+        {
+            var rtn = Enum.GetValues(typeof(Code))
+               .Cast<Code>()
+               .ToDictionary(t => (int)t, t => t.ToString());
+
+            return DataResult<dynamic>.Success(rtn);
+        }
     }
 }
